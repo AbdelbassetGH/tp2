@@ -13,7 +13,6 @@ public class CalculatriceTest {
     Calculatrice calc;
     @Test
     public void testAdditionner() {
-
         Mockito.when(calc.additionner(6, 9)).thenReturn(15);
 
         int result = calc.additionner (6,9);
@@ -25,7 +24,7 @@ public class CalculatriceTest {
         Mockito.verifyNoMoreInteractions(calc);
 
         int state = calc.getState();
-
         Mockito.verify(calc).getState();
+        Mockito.when(calc.getState()).thenReturn(Integer.valueOf("1")) ;
     }
 }

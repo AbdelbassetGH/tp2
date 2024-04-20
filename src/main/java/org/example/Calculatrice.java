@@ -1,7 +1,7 @@
 package org.example;
 
 public class Calculatrice {
-    private int state;
+    private int state=1;
 
     public int getState() {
         return state;
